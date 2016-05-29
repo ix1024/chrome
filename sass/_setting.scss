@@ -1,0 +1,62 @@
+.setting-area {
+	$radius: 3px;
+	position: fixed;
+	right: 0;
+	top: 10rem;
+	z-index: $zIndex*100;
+	color: nth($color, 2);
+	border-bottom-left-radius: $radius;
+
+	select {
+		color: nth($color, 2);
+	}
+	.setting-body {
+		//display: none;
+		width: 0;
+		min-height: 10rem;
+		padding-bottom: 1rem;
+		background-color: #FFF;
+		@include transition(all .25s ease-in-out);
+	}
+	&:hover {
+		// .setting-body {
+		// 	width: 20rem;
+		// }
+	}
+	.setting-title {
+		font-size: 2rem;
+		line-height: 2rem;
+		padding: .5rem;
+	}
+	.setting-area-icon {
+		$iconsSize: 3rem;
+		position: absolute;
+		width: $iconsSize;
+		height: $iconsSize;
+		line-height: $iconsSize;
+		top: 0;
+		left: -$iconsSize;
+		text-align: center;
+		background-color: #FFF;
+		cursor: pointer;
+		//padding: .5rem;
+		border-top-left-radius: $radius;
+		border-bottom-left-radius: $radius;
+		font-size: 2rem;
+	}
+	dl {
+		margin: 1rem;
+	}
+	dt {
+		width: 5rem;
+		text-align: right;
+		@extend .fl;
+	}
+	dd {
+		margin-left: 6rem;
+		white-space: nowrap;
+
+		&:after {
+		}
+	}
+}

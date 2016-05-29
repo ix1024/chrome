@@ -1,0 +1,42 @@
+
+.time, .date {
+	@extend .text-shadow;
+}
+.time {
+	text-align: center;
+	font-size: 10rem;
+	line-height: 10rem;
+	color: #fff;
+	margin: 10rem 0 0 0;
+	font-family: Arial;
+
+	p {
+		position: relative;
+		display: inline-block;
+		padding-right: 40px;
+	}
+	span {
+	}
+	span, sup {
+		vertical-align: text-top;
+	}
+	sup {
+		top: 0;
+	}
+	sub {
+		bottom: 12px;
+	}
+	sup, sub {
+		position: absolute;
+		right: 0;
+		font-size: 16px;
+		line-height: 16px;
+		margin-left: 10px;
+		margin-top: 20px;
+	}
+}
+.date {
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}

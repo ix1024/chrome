@@ -1,0 +1,82 @@
+//搜索
+.search {
+	//display: -webkit-box;
+	padding: 30px 10px;
+	margin: auto;
+	$radius: 3px;
+
+	.search-content {
+		position: relative;
+		margin: auto;
+		width: 70%;
+	}
+	input[type=search], button {
+		height: 40px;
+		padding: 10px;
+		border: none;
+		vertical-align: middle;
+		outline: none;
+	}
+	input[type=search] {
+		width: 100%;
+		box-sizing: border-box;
+		background: rgba(255, 255, 255, .0);
+		color: #fff;
+		padding-right: 100px;
+		border: 2px solid rgba(255, 255, 255, 0.9);
+		//box-shadow: -0px 0 5px rgba(0, 0, 0, 0.5);
+		border-top-left-radius: $radius;
+		border-bottom-left-radius: $radius;
+	}
+	button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100px;
+		cursor: pointer;
+		background-color: #fff;
+		font-size: 16px;
+		color: #666;
+		box-shadow: -1px 0 5px rgba(255, 255, 255, 0.5);
+		//text-transform: uppercase;
+		border-top-right-radius: $radius;
+		border-bottom-right-radius: $radius;
+	}
+	::-webkit-input-placeholder {
+		color: rgba(255, 255, 255, .8);
+	}
+	.search-result {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 40px;
+		max-height: 300px;
+		text-align: left;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		overflow-y: auto;
+		background-origin: content-box;
+		border: 10px solid rgba(255, 255, 255, .3);
+
+		&:empty {
+			display: none
+		}
+	}
+	.search-books-list {
+		background-color: #fff;
+	}
+	li {
+		@extend .ell;
+		padding: 5px 10px;
+		border-bottom: 1px solid #eee;
+
+		span {
+			color: #999;
+			margin-left: 20px;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: #333;
+	}
+}

@@ -1,0 +1,108 @@
+﻿html {
+	height: 100%;
+	font-size: 62.5%;
+	background: #eee url(images/bg1.jpg) repeat center top;
+	overflow-x: hidden;
+}
+body {
+	font-size: 1em;
+	line-height: 1.5;
+	font-family: '微软雅黑', Helvetica, Arial, sans-serif;
+}
+.form-radius {
+	border-radius: 3px;
+}
+select, input, label {
+	vertical-align: middle;
+}
+select, input {
+	&:focus {
+		outline-color: rgba(0, 0, 0, .5);
+	}
+}
+select {
+	border: 1px solid #ccc;
+	padding: .5rem;
+	@extend .form-radius;
+}
+.bg-image {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	z-index: $zIndex;
+}
+.bg-box {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: $zIndex;
+}
+.text-shadow {
+	text-shadow: -1px 0 1px rgba(0, 0, 0, 0.8);
+}
+.top {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 30px;
+	z-index: $zIndex*3;
+	background-color: rgba(0, 0, 0, .2);
+	color: #fff;
+}
+.wearther {
+	text-align: right;
+
+	span {
+		margin-right: 10px;
+	}
+}
+.body {
+	position: relative;
+	background: rgba(0, 0, 0, 0);
+	z-index: $zIndex*2;
+}
+.top {
+	line-height: 2em;
+}
+//
+
+.toolbar {
+	$radius: 100px;
+	position: fixed;
+	bottom: 0;
+	left:50%;
+	width: 80%;
+	height: 5rem;
+	margin-left: -40%; 
+	color: #fff;
+	font-size: 10rem;
+	z-index: $zIndex*2;
+
+	.bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, .3);
+		-webkit-filter: blur(10px);
+		z-index: $zIndex*0;
+		border-top-left-radius: $radius;
+		border-top-right-radius: $radius;
+	}
+	.toolbar-content {
+		position: relative;
+		z-index: $zIndex*2;
+	}
+	span {
+		-webkit-filter: blur(0);
+	}
+}

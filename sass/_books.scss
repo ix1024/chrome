@@ -1,0 +1,40 @@
+@import 'var';
+.books {
+	margin: 20px 100px;
+	@extend .text-shadow;
+
+	li {
+		float: left;
+		width: 10%;
+		text-align: center;
+		color: #fff;
+	}
+	img {
+		vertical-align: middle;
+		max-width: 50%;
+		max-height: 50%;
+	}
+	span {
+		width: 100%;
+		display: inline-block;
+		margin: 10px 5px;
+		@extend .ell;
+		font-size: 14px;
+	}
+	a {
+		display: block;
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		margin: auto;
+		//border: 2px solid rgba(0, 0, 0, .05);
+		background-color: rgba(255, 255, 255, 0.9);
+		text-decoration: none;
+		border-radius: 10px;
+		box-shadow: -1px 0 5px rgba(0, 0, 0, 0.05);
+
+		&, &:hover {
+			color: nth($color, 1);
+		}
+	}
+}

@@ -1,0 +1,225 @@
+@import 'global';
+@import 'mixin';
+$color: #333;
+
+html {
+	font-size: 62.5%;
+}
+
+input,
+button,
+select,
+a {
+	outline: none;
+}
+
+html {
+	width: 640px;
+	height: 480px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 12px;
+}
+
+body {
+	font-family: Arial;
+	font: 12px/1.5 "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, "宋体", sans-serif;
+}
+
+.title {
+	font-size: 14px;
+	color: #fff;
+	background: #242a30;
+	padding: 8px;
+}
+
+.border-radius {
+	border-radius: 3px;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	cursor: pointer;
+	@extend .border-radius;
+	@extend .user-select;
+}
+
+.btn-1 {
+	@extend .btn;
+	background-color: #2a72b5;
+	color: #fff;
+}
+
+.btn-2 {
+	@extend .btn;
+	background-color: #eee;
+	color: #333;
+}
+
+.wrap {
+	padding: 20px;
+
+	.list {
+		@extend .clearfix;
+
+		li {
+			list-style-type: none;
+			float: left;
+			margin-right: 10px;
+		}
+
+		label {
+			display: block;
+			height: 30px;
+			line-height: 30px;
+		}
+
+	}
+
+	select,
+	input[type=text] {
+		min-width: 100px;
+		border: 1px solid #aaa;
+	}
+
+	select,
+	input[type=text],
+	button {
+		height: 27px;
+		padding: 0 10px;
+		vertical-align: middle;
+		border-radius: 3px;
+	}
+
+	button {
+		cursor: pointer;
+		background-color: #2a72b5;
+		color: #fff;
+		border: none;
+	}
+
+	.select-email {
+		width: 200px;
+	}
+
+}
+
+.info {
+	margin: 5px 0;
+	color: red;
+}
+
+.email-url {
+	margin: 10px auto;
+	border: 1px solid #ccc;
+	color: #666;
+	@extend .border-radius;
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 12px;
+	
+	ul,
+	li {
+		padding: 0;
+		margin: 0;
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		color: #666;
+		max-width: 90%;
+		@extend .ell;
+	}
+
+	input[type=checkbox] {
+		float: right;
+	}
+
+	a,
+	input {
+		vertical-align: middle;
+	}
+
+	li {
+		padding: 8px 10px;
+		@extend .clearfix;
+
+		&:nth-child(even) {
+			background-color: #f0f3f5;
+		}
+
+		span,
+		a {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+	}
+
+	.item-name-site,
+	.item-name-user,
+	.item-name-password {
+		margin-right: 5px;
+	}
+
+	.url {
+		width: 200px;
+		@extend .ell;
+	}
+
+	.user-name {
+		width: 150px;
+		@extend .ell;
+	}
+
+	.user-password {
+		width: 80px;
+		@extend .ell;
+	}
+
+}
+
+.btn-box {
+	margin: 5px;
+	text-align: center;
+
+	.btn-1,
+	.btn-2 {
+		margin: 5px;
+	}
+
+}
+
+.select-all-box {
+	margin: 5px 0;
+
+	label {
+		cursor: pointer;
+		@extend .user-select;
+		font-size: 12px;
+		font-weight: lighter;
+	}
+
+	input[type=checkbox],
+	label {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+		padding: 0;
+	}
+
+	label {
+		margin-right: 15px;
+	}
+
+	input[type=checkbox] {
+		margin-right: 5px;
+	}
+
+}
