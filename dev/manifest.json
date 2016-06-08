@@ -1,0 +1,37 @@
+{
+	"manifest_version": 2,
+	"name": "Dev Tools",
+	"description": "前端开发工具",
+	"version": "0.0.1",
+	"background": {
+		"scrips": ["src/background.js", "src/require.js", "src/config.js"],
+		"page": "html/background.html"
+	},
+	"content_scripts": [{
+		"matches": ["http://*/*", "https://*/*", "*://*/*"],
+		"run_at": "document_idle",
+		"js": ["src/jquery.js", "src/content.js"]
+	}],
+	"permissions": [
+		"management",
+		"activeTab",
+		"history",
+		"background",
+		"bookmarks",
+		"cookies",
+		"contentSettings",
+		"contextMenus",
+		"tabs",
+		"notifications",
+		"idle",
+		"<all_urls>",
+		"*://*/",
+		"http://*/",
+		"https://*/"
+	],
+	"icons": {
+		"16": "icons/plugin_16.png",
+		"48": "icons/plugin_48.png",
+		"128": "icons/plugin_128.png"
+	}
+}
