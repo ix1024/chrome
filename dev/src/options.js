@@ -1,4 +1,6 @@
-define([], function() {
+define([
+	'cache'
+], function(Cache) {
 	var $$ = function(id) {
 		return document.getElementById(id);
 	};
@@ -11,6 +13,7 @@ define([], function() {
 		"localStorage": true,
 		"pluginData": true,
 		"webSQL": true,
+		"history": true,
 		"fileSystems": true
 	};
 	var options = JSON.parse(localStorage.getItem('dataToRemove')) || dataToRemove;
@@ -29,6 +32,10 @@ define([], function() {
 		}, false);
 	}
 	//全选
-
+	var clear = $$('clear');
+	var cache = new Cache();
+	clear.addEventListener('click', function() {
+		cache.onclick();
+	}, false);
 	return {};
 });
