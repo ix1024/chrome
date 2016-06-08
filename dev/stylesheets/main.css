@@ -1115,3 +1115,7 @@ select { border: 1px solid #ccc; padding: .5rem; }
 @keyframes slideOutUp { from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
   to { visibility: hidden; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); } }
 .slideOutUp { -webkit-animation-name: slideOutUp; animation-name: slideOutUp; }
+
+.options-box { width: 50%; min-height: 200px; margin: 20px auto; padding: 20px; background-color: #fff; font-size: 16px; color: #333; }
+.options-box label { cursor: pointer; margin-left: 10px; }
+.options-box li { margin: 10px 0; }

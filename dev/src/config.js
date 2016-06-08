@@ -5,7 +5,8 @@ require.config({
 		'main': 'main',
 		'clear': 'clear',
 		'view': 'view',
-		'cache': 'cache'
+		'cache': 'cache',
+		'options': 'options'
 	},
 	shim: {
 		// 'mian': {

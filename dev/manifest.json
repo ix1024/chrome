@@ -12,6 +12,7 @@
 		"run_at": "document_idle",
 		"js": ["src/jquery.js", "src/content.js"]
 	}],
+	"options_page":"html/options.html",
 	"permissions": [
 		"management",
 		"activeTab",
