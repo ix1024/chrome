@@ -33,4 +33,6 @@
 	$(function() {
 		run();
 	});
+	setTimeout(run, 3000);
+	window.addEventListener('load', run, false);
 })(this);

@@ -10,16 +10,16 @@ define([
 	// }, function(tab) {
 	// 	console.log('tab', tab);
 	// });
-	var sendMessage = function() {
-
-	};
-	chrome.tabs.onSelectionChanged.addListener(function(tabId) {
+	var sendMessage = function(tabId) {
 		console.log(tabId);
 		chrome.tabs.sendMessage(tabId, {
 			tabId: tabId
 		}, function(response) {});
-
-	});
+	};
+	chrome.tabs.onSelectionChanged.addListener(sendMessage);
+	chrome.tabs.onCreated.addListener(sendMessage);
+	chrome.tabs.onUpdated.addListener(sendMessage);
+	//chrome.tabs.onMoved.addListener(sendMessage);
 
 
 
@@ -128,14 +128,14 @@ define([
 			});
 			var clear = new Clear();
 			//new Clear();
-
-			chromeExtension.onMessage.addListener(function(request, sender, sendResponse) {
+			var update = function(request, sender, sendResponse) {
 				var scripts = request.scripts || [];
 				var links = request.links || [];
 				//console.log(scripts, links);
 				view.updateJs(scripts);
 				view.updateCss(links);
-			});
+			};
+			chromeExtension.onMessage.addListener(update);
 		}
 	};
 });
