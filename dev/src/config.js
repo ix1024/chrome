@@ -4,7 +4,8 @@ require.config({
 	paths: {
 		'main': 'main',
 		'clear': 'clear',
-		'view': 'view'
+		'view': 'view',
+		'cache': 'cache'
 	},
 	shim: {
 		// 'mian': {

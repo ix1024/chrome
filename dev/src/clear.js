@@ -40,6 +40,7 @@ define([
 				console.log(list.length);
 				menus.update(_this.id, {
 					title: _this.getTitle(list.length),
+					enabled: !!list.length,
 					onclick: function() {
 						_this.onclick();
 					}

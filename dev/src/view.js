@@ -13,10 +13,12 @@ define([
 		init: function() {
 			var _this = this;
 			_this.js = menus.create({
-				title: _this.getTitle('View Javascripts')
+				title: _this.getTitle('View Javascripts'),
+				enabled: false
 			});
 			_this.css = menus.create({
-				title: _this.getTitle('View CSS')
+				title: _this.getTitle('View CSS'),
+				enabled: false
 			});
 			_this.updateJs();
 			_this.updateCss();
@@ -38,7 +40,8 @@ define([
 			_this.remove(_this.jsList);
 			_this.jsList = [];
 			menus.update(_this.js, {
-				title: _this.getTitle('View Javascripts', list.length)
+				title: _this.getTitle('View Javascripts', list.length),
+				enabled: !!list.length
 			});
 			list.forEach(function(item) {
 				var url = item || '';
@@ -60,7 +63,8 @@ define([
 			_this.remove(_this.cssList);
 			_this.cssList = [];
 			menus.update(_this.css, {
-				title: _this.getTitle('View Javascripts', list.length)
+				title: _this.getTitle('View CSS', list.length),
+				enabled: !!list.length
 			});
 			list.forEach(function(item) {
 				var url = item || '';

@@ -21,6 +21,7 @@
 		"cookies",
 		"contentSettings",
 		"contextMenus",
+		"browsingData",
 		"tabs",
 		"notifications",
 		"idle",
