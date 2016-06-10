@@ -5,9 +5,14 @@ define([
 	'clear',
 	'view',
 	'cache'
-], function(tabs, menus, chromeExtension, Clear, View, Cache) {
-
-
+], function(
+	tabs,
+	menus,
+	chromeExtension,
+	Clear,
+	View,
+	Cache
+) {
 
 	return {
 		createHeader: function(title) {
@@ -64,10 +69,10 @@ define([
 			chromeExtension.onMessage.addListener(update);
 
 			chrome.tabs.onSelectionChanged.addListener(sendMessage);
-			chrome.tabs.onCreated.addListener(sendMessage);
+			// chrome.tabs.onCreated.addListener(sendMessage);
 			chrome.tabs.onUpdated.addListener(sendMessage);
-			chrome.tabs.onActiveChanged.addListener(sendMessage);
-			chrome.tabs.onReplaced.addListener(sendMessage);
+			// chrome.tabs.onActiveChanged.addListener(sendMessage);
+			// chrome.tabs.onReplaced.addListener(sendMessage);
 		}
 	};
 });

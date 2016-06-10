@@ -142,7 +142,7 @@ define([
 		init: function() {
 			var _this = this;
 			menus.create({
-				title: 'Clear Cache',
+				title: 'Clear browser cache',
 				onclick: function() {
 					_this.onclick();
 				}

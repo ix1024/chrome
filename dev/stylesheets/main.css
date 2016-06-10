@@ -1120,7 +1120,7 @@ select { border: 1px solid #ccc; padding: .5rem; }
 .options-box > div { background-color: #fff; padding: 20px; min-height: 200px; }
 .options-box label { cursor: pointer; margin-left: 10px; }
 .options-box input, .options-box label { vertical-align: middle; }
-.options-box input[type=checkbox] { width: 25px; height: 25px; }
+.options-box input[type=checkbox] { width: 20px; height: 20px; }
 .options-box input:checked:hover, .options-box input:checked + label { color: #4caf50; }
 .options-box li { margin: 10px 0; }
 .options-box .title { padding: 10px 0; font-size: 20px; border-bottom: 1px dashed #ccc; }

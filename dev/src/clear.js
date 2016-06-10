@@ -12,7 +12,7 @@ define([
 		domain: '',
 		getTitle: function(size) {
 			var str = size ? '(' + size + ')' : '';
-			return 'Clear Cookies' + str;
+			return 'Clear browser cookies' + str;
 		},
 		init: function() {
 			var _this = this;

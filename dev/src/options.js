@@ -17,6 +17,8 @@ define([
 		"fileSystems": true
 	};
 	var options = JSON.parse(localStorage.getItem('dataToRemove')) || dataToRemove;
+	var html = [];
+	
 	//console.log(options);
 	for (var key in options) {
 		var id = $$(key);
