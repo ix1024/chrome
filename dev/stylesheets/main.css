@@ -323,12 +323,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*
 ** ========== 浮动 ==========
 */
-.clearfix:before, .clearfix:after { clear: both; content: '.'; display: block; height: 0; line-height: 0; overflow: hidden; }
-.clearfix { zoom: 1; }
+.clearfix:before, .popup ul:before, .clearfix:after, .popup ul:after { clear: both; content: '.'; display: block; height: 0; line-height: 0; overflow: hidden; }
+.clearfix, .popup ul { zoom: 1; }
 
 .clear { clear: both; height: 0; line-height: 0; overflow: hidden; }
 
-.fl, .setting-area dt { float: left; _display: inline; }
+.fl, .setting-area dt, .popup li { float: left; _display: inline; }
 
 .fr { float: right; _display: inline; }
 
@@ -375,7 +375,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .fa-edit:before { content: "\f013"; }
 
-html { height: 100%; font-size: 62.5%; background: #eee url(images/bg1.jpg) repeat center top; overflow-x: hidden; }
+html { height: 100%; font-size: 62.5%; background: #eee; overflow-x: hidden; }
 
 body { font-size: 1em; line-height: 1.5; font-family: '微软雅黑', Helvetica, Arial, sans-serif; }
 
@@ -1124,3 +1124,14 @@ select { border: 1px solid #ccc; padding: .5rem; }
 .options-box input:checked:hover, .options-box input:checked + label { color: #4caf50; }
 .options-box li { margin: 10px 0; }
 .options-box .title { padding: 10px 0; font-size: 20px; border-bottom: 1px dashed #ccc; }
+
+.popup { width: 200px; }
+.popup li { width: 100px; height: 100px; color: #fff; cursor: pointer; font-size: 16px; -webkit-transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; -ms-transition: all 0.25s ease-in-out; -o-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; }
+.popup li a { display: -webkit-box; height: 100%; -webkit-box-pack: center; -webkit-box-align: center; color: #fff; text-decoration: none; }
+.popup li:hover { opacity: 0.75; }
+.popup li:nth-child(6n+1) { background: #FF895B; }
+.popup li:nth-child(6n+2) { background: #FFAE00; }
+.popup li:nth-child(6n+3) { background: #78C8E6; }
+.popup li:nth-child(6n+4) { background: #70D572; }
+.popup li:nth-child(6n+5) { background: #5E76B3; }
+.popup li:nth-child(6n+6) { background: #DD4B39; }

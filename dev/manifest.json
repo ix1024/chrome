@@ -4,7 +4,7 @@
 	"description": "前端开发工具",
 	"version": "0.0.1",
 	"background": {
-		"scrips": ["src/background.js", "src/require.js", "src/config.js"],
+		"scrips": ["src/background.js", "src/require.js", "src/config.js", "html/area.js", "html/datejs.js", "html/function.js" "html/js.js"],
 		"page": "html/background.html"
 	},
 	"content_scripts": [{
@@ -12,7 +12,15 @@
 		"run_at": "document_idle",
 		"js": ["src/jquery.js", "src/content.js"]
 	}],
-	"options_page":"html/options.html",
+	"options_page": "html/options.html",
+	"chrome_url_overrides": {
+		//"newtab": "html/blank.html"
+	},
+	"browser_action": {
+		"default_icon": "icons/plugin_16.png",
+		"default_popup": "html/popup.html",
+		"default_title": ""
+	},
 	"permissions": [
 		"management",
 		"activeTab",
