@@ -6,6 +6,7 @@ require.config({
 		'clear': 'clear',
 		'view': 'view',
 		'cache': 'cache',
+		'capture': 'capture',
 		'options': 'options'
 	},
 	shim: {

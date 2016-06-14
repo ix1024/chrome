@@ -1,8 +1,28 @@
 (function(window) {
+	console.log('content');
+	chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
+		//alert('shoudao');
+		alert(request);
+		console.log('request', request);
+		console.log('sender', sender);
+		console.log('sendResponse', sendResponse);
+		// sendResponse({
+		// 	msg: 'shoudaole'
+		// });
+		var img = new Image();
+		img.onload = function() {
+			//$(this).append('body');
+			alert(this);
+			document.body.appendChild(this);
+		};
+		img.src = request.captureData;
+		console.log(img);
+	});
 
 	function run() {
+		 
 		var getInfo = function() {
-			console.log('content page');
+			//console.log('content page');
 			var scripts = document.scripts || [];
 			var scriptsSrc = [];
 			var links = document.getElementsByTagName('link') || [];
@@ -24,8 +44,10 @@
 				links: linksHref,
 			}, function(response) {});
 		};
+
 		chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 			//alert('收到');
+			//console.log(request, sender, sendResponse);
 			getInfo();
 		});
 		getInfo();

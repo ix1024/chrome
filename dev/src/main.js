@@ -4,14 +4,16 @@ define([
 	'chromeExtension',
 	'clear',
 	'view',
-	'cache'
+	'cache',
+	'capture'
 ], function(
 	tabs,
 	menus,
 	chromeExtension,
 	Clear,
 	View,
-	Cache
+	Cache,
+	Capture
 ) {
 
 	return {
@@ -23,7 +25,7 @@ define([
 			});
 		},
 		init: function() {
-			var view, clear, cache;
+			var view, clear, cache, capture;
 
 			// chrome.tabs.query({
 			// 	active: true
@@ -31,7 +33,18 @@ define([
 			// 	console.log('tab', tab);
 			// });
 			//this.createHeader('JS CSS 查看');
+			// chrome.tabs.captureVisibleTab(null, {
 
+			// 	format: "png",
+
+			// 	quality: 100
+
+			// }, function(data) {
+			// 	console.log(data);
+
+
+			// });
+			capture = new Capture();
 			view = new View();
 			menus.create({
 				type: 'separator'
@@ -66,11 +79,11 @@ define([
 				}, function(response) {});
 				update();
 			};
-			chromeExtension.onMessage.addListener(update);
+			//#chromeExtension.onMessage.addListener(update);
 
-			chrome.tabs.onSelectionChanged.addListener(sendMessage);
+			//#chrome.tabs.onSelectionChanged.addListener(sendMessage);
 			// chrome.tabs.onCreated.addListener(sendMessage);
-			chrome.tabs.onUpdated.addListener(sendMessage);
+			//#chrome.tabs.onUpdated.addListener(sendMessage);
 			// chrome.tabs.onActiveChanged.addListener(sendMessage);
 			// chrome.tabs.onReplaced.addListener(sendMessage);
 		}
