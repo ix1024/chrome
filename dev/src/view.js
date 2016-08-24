@@ -14,10 +14,12 @@ define([
 			var _this = this;
 			_this.js = menus.create({
 				title: _this.getTitle('View Javascripts'),
+				//contexts: ['page'],
 				enabled: false
 			});
 			_this.css = menus.create({
 				title: _this.getTitle('View CSS'),
+				//contexts: ['page'],
 				enabled: false
 			});
 			_this.updateJs();

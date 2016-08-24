@@ -141,12 +141,34 @@ define([
 	Cache.prototype = {
 		init: function() {
 			var _this = this;
-			menus.create({
+			_this.id = menus.create({
 				title: 'Clear browser cache',
+				enabled: true,
 				onclick: function() {
 					_this.onclick();
 				}
 			});
+
+			function run() {
+				menus.update(_this.id, {
+					enabled: true
+				});
+			}
+
+			function callback(tabId, tabStatus, currentTab) {
+				if (tabStatus.status === 'loading') {
+
+				} else if (tabStatus.status === 'complete') {
+					run(tabId);
+				} else if (tabStatus.windowId && !currentTab && tabStatus.isWindowClosing === undefined) { //selected
+					run(tabId);
+				} else if (tabStatus.isWindowClosing === false) { //remove
+				}
+
+			}
+			chrome.tabs.onSelectionChanged.addListener(callback);
+			chrome.tabs.onUpdated.addListener(callback);
+			chrome.tabs.onRemoved.addListener(callback);
 		},
 		onclick: function() {
 			if (window.confirm('确定要删除吗？')) {
@@ -154,7 +176,10 @@ define([
 			}
 		},
 		clear: function() {
-
+			var _this = this;
+			menus.update(_this.id, {
+				enabled: false
+			});
 		}
 	};
 	return Cache;

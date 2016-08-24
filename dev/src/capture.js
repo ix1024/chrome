@@ -28,20 +28,22 @@ define([
 			}, function(tab) {
 				//_this.tabId = tab[0].id;
 				var windowId = tab[0].windowId;
-				console.log(windowId);
+				console.log('captureVisibleTab',windowId);
 				//console.time('capture');
-
-				chrome.tabs.captureVisibleTab(windowId, {
+				window.open('image.html', '_blank');
+				tabs.captureVisibleTab(windowId, {
 					format: "png",
 					quality: 100
 				}, function(data) {
-					console.log(data);
+					//console.log(data);
+					console.log('有DATA了');
 					console.timeEnd('capture');
-					// chrome.tabs.sendMessage(windowId, {
-					// 	windowId: windowId
-					// }, function(response) {});
+
+					chromeExtension.sendMessage({
+						imageData: data
+					}, function(response) {});
 				});
-				//window.open('image.html', '_blank');
+
 			});
 		}
 	};

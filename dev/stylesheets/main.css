@@ -1135,3 +1135,10 @@ select { border: 1px solid #ccc; padding: .5rem; }
 .popup li:nth-child(6n+4) { background: #70D572; }
 .popup li:nth-child(6n+5) { background: #5E76B3; }
 .popup li:nth-child(6n+6) { background: #DD4B39; }
+
+html, body { background-color: #333; }
+
+.image-box { text-align: center; background-color: #fff; min-height: 600px; margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+.image-box img { max-width: 90%; }
+
+.image-tools { height: 50px; background-color: #333; }

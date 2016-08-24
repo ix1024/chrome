@@ -1,0 +1,22 @@
+.table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+.table th { background-color: #222; color: #fff; border: 1px dashed #8BC34A; }
+.table td { word-break: break-all; background-color: #f0f0f0; border: 1px dashed #8BC34A; }
+.table tr:hover td { background-color: #fff; }
+.table td, .table th { padding: 10px; text-align: center; }
+.table td:nth-child(1), .table th:nth-child(1) { width: 5%; }
+.table td:nth-child(2), .table th:nth-child(2) { width: 15%; }
+.table td:nth-child(3), .table th:nth-child(3) { width: 10%; }
+.table td:nth-child(4), .table th:nth-child(4) { width: 15%; }
+.table td:nth-child(5), .table th:nth-child(5) { width: 10%; }
+.table td:nth-child(6), .table th:nth-child(6) { width: 10%; }
+.table td:nth-child(7), .table th:nth-child(7) { width: 5%; }
+.table td:nth-child(8), .table th:nth-child(8) { width: 5%; }
+.table td:nth-child(9), .table th:nth-child(9) { width: 5%; }
+.table td:nth-child(10), .table th:nth-child(10) { width: 5%; }
+.table td:nth-child(11), .table th:nth-child(11) { width: 5%; }
+.table td:nth-child(12), .table th:nth-child(12) { width: 10%; }
+
+.cookie-tools { margin: 20px 0; text-align: right; }
+
+.btn { display: inline-block; padding: 5px; background-color: #4090ec; color: #fff; cursor: pointer; border-radius: 5px; margin: 5px; }
+.btn:hover { opacity: 0.7; }
