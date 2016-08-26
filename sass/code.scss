@@ -1,0 +1,28 @@
+@import 'global';
+@import 'mixin';
+@import 'var';
+@import 'icons';
+@import 'g';
+@import 'setting';
+@import 'font';
+@import 'books';
+
+textarea {
+	width: 100%;
+	height: 200px;
+}
+
+.code-type {
+	width: 90%;
+	margin: 10px 0;
+	font-size: 16px;
+
+	li {
+		margin-right: 10px;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+}

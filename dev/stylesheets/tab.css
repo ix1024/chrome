@@ -320,11 +320,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .p-l-25 { padding-left: 25px; }
 
+.btn { display: inline-block; border: none; cursor: pointer; border-radius: 3px; }
+.btn:hover { opacity: 0.7; }
+
+.btn-1 { background-color: #d9534f; border: 1px solid #d43f3a; }
+
+.btn-2 { background-color: #286090; border: 1px solid #204d74; }
+
+.btn-3 { background-color: #449d44; border: 1px solid #398439; }
+
+.btn-4 { background-color: #ec971f; border: 1px solid #d58512; }
+
+.btn-5 { background-color: #31b0d5; border: 1px solid #269abc; }
+
+.btn-1, .btn-2, .btn-3, .btn-4, .btn-5 { padding: 5px 10px; color: #fff; font-size: 14px; }
+
+.h1 { font-size: 20px; margin-bottom: 10px; }
+
+.h2 { font-size: 18px; }
+
+.wrap { width: 80%; margin: 20px auto; padding: 20px; border-radius: 10px; background-color: #fff; }
+
+.transition, .btn { -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -ms-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; }
+
 /*
 ** ========== 浮动 ==========
 */
-.clearfix:before, .popup ul:before, .clearfix:after, .popup ul:after { clear: both; content: '.'; display: block; height: 0; line-height: 0; overflow: hidden; }
-.clearfix, .popup ul { zoom: 1; }
+.clearfix:before, .wrap:before, .popup ul:before, .clearfix:after, .wrap:after, .popup ul:after { clear: both; content: '.'; display: block; height: 0; line-height: 0; overflow: hidden; }
+.clearfix, .wrap, .popup ul { zoom: 1; }
 
 .clear { clear: both; height: 0; line-height: 0; overflow: hidden; }
 
@@ -355,7 +378,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .inline-block { display: inline-block; *display: inline; *zoom: 1; }
 
-.user-select, .options-box input, .options-box label { -moz-user-select: none; /* firefox */ -webkit-user-select: none; /* webkit */ -ms-user-select: none; /* IE10 */ -khtml-user-select: none; /* old */ user-select: none; }
+.user-select, .btn, .options-box input, .options-box label { -moz-user-select: none; /* firefox */ -webkit-user-select: none; /* webkit */ -ms-user-select: none; /* IE10 */ -khtml-user-select: none; /* old */ user-select: none; }
 
 /*
 ** ========== Font ==========
@@ -369,6 +392,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .fz-px-18 { font-size: 18px; }
 
 .fz-px-20 { font-size: 20px; }
+
+input[type=text], input[type=password], input[type=button], input[type=image], button, select, textarea { border: 1px solid #ccc; border-radius: 2px; resize: none; }
+input[type=text]:focus, input[type=password]:focus, input[type=button]:focus, input[type=image]:focus, button:focus, select:focus, textarea:focus { outline: none; }
 
 @font-face { font-family: 'FontAwesome'; src: url("fonts/fontawesome-webfont.eot?v=4.3.0"); src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
 .fa { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); }

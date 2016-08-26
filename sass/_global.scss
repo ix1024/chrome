@@ -2,6 +2,12 @@
 @import 'mixin';
 @import 'width';
 @import 'margin-padding';
+@import 'button';
+@import 'layout';
+
+.transition {
+	@include transition(all 0.25s linear);
+}
 
 /*
 ** ========== 浮动 ==========
@@ -93,4 +99,21 @@
 
 .fz-px-20 {
 	font-size: 20px;
+}
+
+input[type=text],
+input[type=password],
+input[type=button],
+input[type=image],
+button,
+select,
+textarea {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	resize: none;
+
+	&:focus {
+		outline: none;
+	}
+
 }

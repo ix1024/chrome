@@ -320,11 +320,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .p-l-25 { padding-left: 25px; }
 
+.btn, .btn-1, .btn-2 { display: inline-block; border: none; cursor: pointer; border-radius: 3px; }
+.btn:hover, .btn-1:hover, .btn-2:hover { opacity: 0.7; }
+
+.btn-1 { background-color: #d9534f; border: 1px solid #d43f3a; }
+
+.btn-2 { background-color: #286090; border: 1px solid #204d74; }
+
+.btn-3 { background-color: #449d44; border: 1px solid #398439; }
+
+.btn-4 { background-color: #ec971f; border: 1px solid #d58512; }
+
+.btn-5 { background-color: #31b0d5; border: 1px solid #269abc; }
+
+.btn-1, .btn-2, .btn-3, .btn-4, .btn-5 { padding: 5px 10px; color: #fff; font-size: 14px; }
+
+.h1 { font-size: 20px; margin-bottom: 10px; }
+
+.h2 { font-size: 18px; }
+
+.wrap { width: 80%; margin: 20px auto; padding: 20px; border-radius: 10px; background-color: #fff; }
+
+.transition, .btn, .btn-1, .btn-2 { -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -ms-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; }
+
 /*
 ** ========== 浮动 ==========
 */
-.clearfix:before, .wrap .list:before, .email-url li:before, .clearfix:after, .wrap .list:after, .email-url li:after { clear: both; content: '.'; display: block; height: 0; line-height: 0; overflow: hidden; }
-.clearfix, .wrap .list, .email-url li { zoom: 1; }
+.clearfix:before, .wrap:before, .wrap .list:before, .email-url li:before, .clearfix:after, .wrap:after, .wrap .list:after, .email-url li:after { clear: both; content: '.'; display: block; height: 0; line-height: 0; overflow: hidden; }
+.clearfix, .wrap, .wrap .list, .email-url li { zoom: 1; }
 
 .clear { clear: both; height: 0; line-height: 0; overflow: hidden; }
 
@@ -369,6 +392,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .fz-px-18 { font-size: 18px; }
 
 .fz-px-20 { font-size: 20px; }
+
+input[type=text], input[type=password], input[type=button], input[type=image], button, select, textarea { border: 1px solid #ccc; border-radius: 2px; resize: none; }
+input[type=text]:focus, input[type=password]:focus, input[type=button]:focus, input[type=image]:focus, button:focus, select:focus, textarea:focus { outline: none; }
 
 html { font-size: 62.5%; }
 

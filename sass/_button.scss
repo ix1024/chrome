@@ -1,0 +1,48 @@
+.btn {
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	border-radius: 3px;
+	@extend .user-select;
+	@extend .transition;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+}
+
+.btn-1 {
+	background-color: #d9534f;
+	border: 1px solid #d43f3a;
+}
+
+.btn-2 {
+	background-color: #286090;
+	border: 1px solid #204d74;
+}
+
+.btn-3 {
+	background-color: #449d44;
+	border: 1px solid #398439;
+}
+
+.btn-4 {
+	background-color: #ec971f;
+	border: 1px solid #d58512;
+}
+
+.btn-5 {
+	background-color: #31b0d5;
+	border: 1px solid #269abc;
+}
+
+.btn-1,
+.btn-2,
+.btn-3,
+.btn-4,
+.btn-5 {
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 14px;
+}

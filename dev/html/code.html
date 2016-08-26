@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Code</title>
+		<meta http-equiv="Refresh" content="10000">
+		<link rel="stylesheet" href="../stylesheets/code.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<h1 class="h1">编码转换</h1>
+			<h2 class="h2">源码</h2>
+			<div class="header">
+				<textarea name="" id="sourceText" cols="30" rows="10"></textarea>
+			</div>
+			<div class="body">
+				<div class="clearfix">
+					<div class="fl code-type">
+						<ul class="clearfix">
+							<li class="fl">
+								<input type="radio" name="toCode" value="unicode" id="toUnit" checked />
+								<label for="toUnit">Unicode编码</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="deunicode" id="deunicode" />
+								<label for="deunicode">Unicode解码</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="toUTF-8" id="toUTF-8" />
+								<label for="toUTF-8">UTF-8编码</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="unUTF-8" id="unUTF-8" />
+								<label for="unUTF-8">UTF-8解码</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="encode64" id="encode64" />
+								<label for="encode64">Base64解码</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="decode64" id="decode64" />
+								<label for="decode64">Base64解码</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="HTMLTOJS" id="HTMLTOJS" />
+								<label for="HTMLTOJS">HTML2JS</label>
+							</li>
+							<li class="fl">
+								<input type="radio" name="toCode" value="TRIMHTML" id="TRIMHTML" />
+								<label for="TRIMHTML">TRIMHTML</label>
+							</li>
+						</ul>
+					</div>
+					<div class="fr">
+						<span class="btn btn-3">转换</span>
+						<span class="btn btn-1" id="clear">清空</span>
+					</div>
+				</div>
+				<h2 class="h2">结果</h2>
+				<textarea name="" id="resultText" cols="30" rows="10"></textarea>
+			</div>
+		</div>
+		<script src="../src/jquery.js"></script>
+		<script src="../src/base64.js"></script>
+		<script src="../src/code.js"></script>
+	</body>
+</html>
