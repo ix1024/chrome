@@ -20,7 +20,7 @@ select, input {
 		outline-color: rgba(0, 0, 0, .5);
 	}
 }
-select {
+select,input[type=text],input[type=password] {
 	border: 1px solid #ccc;
 	padding: .5rem;
 	@extend .form-radius;

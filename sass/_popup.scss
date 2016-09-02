@@ -1,57 +1,62 @@
+$color:#FF895B #FFAE00 #78C8E6 #70D572 #7FC735 #13B0A5 #1EB98F #ff9800;
 .popup {
-	width: 200px;
+	width: 320px;
+	padding: 5px;
+	background-color: #fff;
+
+	.popup-header {
+		background-color:#2D89EF;
+		color: #fff;
+		padding: 5px;
+		margin: 5px;
+		font-size: 16px;
+		@include box-sizing(border-box);
+	}
 
 	ul {
 		@extend .clearfix;
 	}
 
 	li {
-		//display: -webkit-box;
-		width: 100px;
-		height: 100px;
+		 
+		width: 80px;
+		height: 80px;
 		color: #fff;
 		cursor: pointer;
-		font-size: 16px;
+		font-size: 12px;
+		//margin: 5px;
+		border:3px solid #fff;
 		@extend .fl;
+		@include box-sizing(border-box);
 		@include transition(all .25s ease-in-out);
-
+		opacity: 0.75;
 		a {
 			display: -webkit-box;
 			height: 100%;
+			@include box-sizing(border-box);
 			-webkit-box-pack: center;
 			-webkit-box-align: center;
+			text-align: center;
+			padding: 5px;
+			line-height: 1.2;
 			color: #fff;
 			text-decoration: none;
 		}
 
 		&:hover {
-			opacity: 0.75;
+			opacity: 1;
+ 			@include transform(scale(1.1,1.1));
 		}
-
-		&:nth-child(6n+1) {
-			background: #FF895B;
-		}
-
-		&:nth-child(6n+2) {
-			background: #FFAE00;
-		}
-
-		&:nth-child(6n+3) {
-			background: #78C8E6;
-		}
-
-		&:nth-child(6n+4) {
-			background: #70D572;
-		}
-
-		&:nth-child(6n+5) {
-			background: #5E76B3;
-		}
-
-		&:nth-child(6n+6) {
-			background: #DD4B39;
-		}
-
+		
+		$num:7;
+		@for $i from 1 through  $num {
+ 			&:nth-child(#{$num}n+#{$i}) {
+ 				@if $i % 4 == 0 {
+ 					 
+ 				}
+				background: nth($color,$i);
+			}
+		} 
 	}
 
 }

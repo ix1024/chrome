@@ -1,9 +1,15 @@
 ﻿@import 'compass/reset';
+@import 'compass/css3';
 @import 'mixin';
 @import 'width';
 @import 'margin-padding';
 @import 'button';
 @import 'layout';
+
+:root,
+body {
+	height: 100%;
+}
 
 .transition {
 	@include transition(all 0.25s linear);
@@ -29,6 +35,23 @@
 
 .fr {
 	@include float(right);
+}
+
+.gray {
+	@include filter(grayscale(100%));
+}
+
+.disabled {
+	//@extend .gray;
+
+	&,
+	&:hover,
+	&:hover *,
+	* {
+		cursor: default !important;
+		@include transform(scale(1, 1) !important);
+	}
+
 }
 
 /*

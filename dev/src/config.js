@@ -8,7 +8,8 @@ require.config({
 		'cache': 'cache',
 		'capture': 'capture',
 		'img': 'img',
-		'options': 'options'
+		'options': 'options',
+		'json-view': '/WebContent/background',
 	},
 	shim: {
 		// 'mian': {
@@ -32,7 +33,7 @@ define('menus', function() {
 define('chromeExtension', function() {
 	return chrome.extension;
 });
-require(['main'], function(main) {
+require(['main','json-view'], function(main) {
 	main.init();
 });
 // require(['jsview'], function(jsview) {

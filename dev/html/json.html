@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JSON VIEW</title>
+		<link rel="stylesheet" href="../stylesheets/json.css" />
+		
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="header">
+				
+			</div>
+			<div class="body clearfix">
+				<div class="json-left">
+					<div class="h1">JSON输入</div>
+					<div class="json-content" id="jsonContent">						
+						<textarea name="" id="jsonSource" cols="30" rows="10"></textarea>
+					</div>
+					
+				</div>
+				<div class="json-right">
+					<div class="h1">结果输出</div>
+					<div class="json-content">
+						
+						<iframe src="view-json.html" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				
+			</div>
+			
+		</div>
+		<script src="../WebContent/workerFormatter.js"></script>
+		<script src="../src/jsonview/json.js"></script>
+	</body>
+</html>

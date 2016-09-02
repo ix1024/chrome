@@ -1,0 +1,54 @@
+@import 'global';
+@import 'mixin';
+@import 'var';
+@import 'icons';
+@import 'g';
+$jsonHeight: 500px;
+$jsonWidth: 49%;
+
+textarea,
+iframe {
+	@include box-sizing(border-box);
+}
+
+.json-left {
+	@extend .fl;
+	width: $jsonWidth;
+
+	textarea {
+		width: 100%;
+		height: $jsonHeight;
+		padding: 5px;
+		border: none;
+	}
+
+}
+
+.json-right {
+	@extend .fr;
+	width: $jsonWidth;
+
+	iframe {
+		width: 100%;
+		height: $jsonHeight;
+	}
+
+}
+
+.json-content {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.json-error {
+	border-color: #d63f3f;
+
+	textarea {
+		background-color: #ffb3b3;
+	}
+
+}
+
+.json-left,
+.json-right {
+}

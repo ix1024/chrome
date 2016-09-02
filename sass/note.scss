@@ -1,0 +1,48 @@
+@import 'global';
+@import 'mixin';
+@import 'var';
+@import 'icons';
+@import 'g';
+@import 'setting';
+@import 'font';
+
+.note-box {
+	@include flexbox((display: box, box-orient:vertical), $version:1);
+	@include box-sizing(border-box);
+	height: 100%;
+	@include flexbox((display: flex, flex-direction:row));
+	//background-color: #B9E367;
+	background-color: #fff;
+
+	.note-aside {
+		width: 200px;
+		background-color: #eee;
+		@include box-sizing(border-box);
+
+		li {
+			height: 30px;
+			line-height: 30px;
+		}
+
+	}
+
+	.note-main {
+		@include box-sizing(border-box);
+	}
+
+	.note-list {
+	}
+
+	.note-item {
+	}
+
+	.note-header {
+	}
+
+	.note-body {
+	}
+
+	.note-footer {
+	}
+
+}

@@ -17,9 +17,9 @@ output_style = :compact
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
- line_comments = false
+ line_comments = true
 
-
+sourcemap=true
 # If you prefer the indented syntax, you might want to regenerate this
 # project again passing --syntax sass, or you can uncomment this:
 preferred_syntax = :sass
