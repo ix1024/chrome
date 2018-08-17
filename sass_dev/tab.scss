@@ -1,0 +1,75 @@
+@import 'global';
+@import 'mixin';
+@import 'var';
+@import 'icons';
+@import 'g';
+@import 'setting';
+@import 'font';
+@import 'books';
+@import 'search';
+@import 'date';
+@import 'animate';
+@import 'options';
+@import 'popup';
+
+html,
+body {
+}
+
+:root {
+  background-color: #fff;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #ddd;
+}
+
+.img-background {
+  width: 120%;
+  height: 120%;
+  position: fixed;
+  left: -10%;
+  top: -10%;
+  z-index: 0;
+  //-webkit-filter: blur(30px);
+  background: url(../stylesheets/images/bg3.jpg) center center;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+.note-box {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 200px;
+  //border: 1px solid #ccc;
+  background: #ffffff;
+  label, input {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  label {
+    cursor: pointer;
+  }
+  .note-header {
+    background-color: #FFC107;
+    padding: 5px;
+  }
+  .note-body {
+    height: 200px;
+    overflow-y: auto;
+    padding: 5px;
+  }
+  .note-footer {
+
+  }
+  dt {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}

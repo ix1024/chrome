@@ -1,0 +1,79 @@
+{
+  "manifest_version": 2,
+  "name": "二维码",
+  "description": "Front-end development tools by kingwell",
+  "version": "0.0.1",
+  "background": {
+    "scrips": [
+      "background.js"
+      // "src/require.js",
+      // "src/config.js",
+      // "src/image.js",
+      // "WebContent/background.js"
+    ],
+     "page": "background.html"
+  },
+  "content_scripts": [
+    // {
+    //   "matches": [
+    //     "http://*/*",
+    //     "https://*/*",
+    //     "*://*/*",
+    //     "http://*/*.json*",
+    //     "file:///*/*.json*"
+    //   ],
+    //   "run_at": "document_idle",
+    //   "run_at": "document_end",
+    //   "js": [
+    //     "src/jquery.js",
+    //     "src/content.js",
+    //     "src/my-calendar.min.js",
+    //     "src/jsonview/workerFormatter.js",
+    //     "WebContent/content.js"
+    //   ],
+    //   "all_frames": true
+    // }
+  ],
+  "page_action": {
+    "default_icon": "icons/16x16.png", // optional 
+    "default_title": "Do action", // optional; shown in tooltip 
+    "default_popup": "page_action.html" // optional 
+  },
+  //"options_page": "html/options.html",
+  "chrome_url_overrides": {
+    //"newtab": "html/blank.html"
+  },
+  // "browser_action": {
+  //   "default_icon": "icons/plugin_16.png",
+  //   "default_popup": "html/popup.html",
+  //   "default_title": ""
+  // },
+  "web_accessible_resources": [
+
+  ],
+  "permissions": [
+    "clipboardWrite",
+    "management",
+    "activeTab",
+    "history",
+    "background",
+    "bookmarks",
+    "cookies",
+    "contentSettings",
+    "contextMenus",
+    "browsingData",
+    "tabs",
+    "notifications",
+    "idle",
+    "<all_urls>",
+    "*://*/",
+    "http://*/",
+    "https://*/",
+    "ftp://*/"
+  ],
+  "icons": {
+    "16": "icons/16x16.png",
+    "48": "icons/48x48.png",
+    "128": "icons/128x128.png"
+  }
+}

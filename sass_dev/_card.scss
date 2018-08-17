@@ -1,0 +1,60 @@
+.card {
+	font-size: 14px;
+
+	.rNo {
+		margin: 5px 0;
+		background-color: #f2f2f2;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		padding: 10px;
+		height: 200px;
+		overflow: auto;
+
+		div {
+			width: 25%;
+			@extend .fl;
+		}
+
+	}
+
+	table {
+		width: 100%;
+
+		caption {
+			div {
+				//border: 1px solid #ccc;
+				border-radius: 5px;
+				background-color: #f2f2f2;
+				padding: 10px;
+			}
+
+		}
+
+		.btn {
+			padding: 5px 20px;
+			border: none;
+		}
+
+		select,
+		input[type=text] {
+			width: 100px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		.td-name {
+			width: 50px;
+			text-align: right;
+		}
+
+		.td-content {
+			width: 350px;
+		}
+
+		td {
+			padding: 5px 10px;
+		}
+
+	}
+
+}

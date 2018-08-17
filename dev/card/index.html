@@ -22,12 +22,13 @@
 						<tr>
 							<th class="td-name"></th>
 							<th></th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td class="td-name">地点：</td>
-							<td>
+							<td class="td-content">
 								<select name="p" id="p">
 									<option value="110000">北京市</option>
 									<option value="120000">天津市</option>
@@ -84,13 +85,15 @@
 									<option value="110117">平谷区</option>
 								</select>
 							</td>
+							<td rowspan="5">
+								<div class="rNo clearfix" id="rNo"></div>
+							</td>
 						</tr>
 						<tr>
 							<td class="td-name">时间：</td>
 							<td>
-								
 								<select id="y" name="SYear">
-									<option value="2016">2016</option>
+									<!-- <option value="2016">2016</option>
 									<option value="2015">2015</option>
 									<option value="2014">2014</option>
 									<option value="2013">2013</option>
@@ -189,11 +192,10 @@
 									<option value="1920">1920</option>
 									<option value="1919">1919</option>
 									<option value="1918">1918</option>
-									<option value="1917">1917</option>
+									<option value="1917">1917</option> -->
 								</select>
-								年
 								<select id="m" name="SMonth">
-									<option value="1">1</option>
+									<!-- <option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
@@ -204,11 +206,10 @@
 									<option value="9">9</option>
 									<option value="10">10</option>
 									<option value="11">11</option>
-									<option value="12">12</option>
+									<option value="12">12</option> -->
 								</select>
-								月
 								<select id="d" name="SDay">
-									<option value="1">1</option>
+									<!-- <option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
 									<option value="4">4</option>
@@ -237,9 +238,8 @@
 									<option value="27">27</option>
 									<option value="28">28</option>
 									<option value="29">29</option>
-									<option value="30">30</option>
+									<option value="30">30</option> -->
 								</select>
-								日
 							</td>
 						</tr>
 						<tr>
@@ -250,8 +250,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="td-name">提交：</td>
-							<td><input type="text" name="n" id="n" size="3" class="input" maxlength="3" style="width:50px;" value="5">个</td>
+							<td class="td-name">个数：</td>
+							<td><input type="text" name="n" id="n" size="3" class="input" maxlength="4" style="" value="10"></td>
 						</tr>
 						<tr>
 							<td class="td-name"></td>
@@ -262,7 +262,7 @@
 						<tr>
 							<td class="td-name"></td>
 							<td>
-								<div class="rNo clearfix" id="rNo"></div>
+								
 							</td>
 						</tr>
 					</tbody>

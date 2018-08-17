@@ -32,6 +32,23 @@
 		@content;
 	}
 }
+ 
+@mixin placeholder{
+	::-webkit-input-placeholder {
+		@content;
+	}
+	:-moz-placeholder {
+		@content;
+	}
+
+	::-moz-placeholder {
+		@content;
+	}
+
+	:-ms-input-placeholder {
+		@content;
+	}
+}
 @mixin animation($string...) {
 	-webkit-animation: $string;
 	-moz-animation: $string;
@@ -59,7 +76,7 @@
 	-o-transition: $string;
 	transition: $string;
 }
-@mixin transform($string) {
+@mixin _transform($string) {
 	-webkit-transform: $string;
 	-moz-transform: $string;
 	-ms-transform: $string;

@@ -6,7 +6,8 @@ define([
 	'view',
 	'cache',
 	'capture',
-	'img'
+	'img',
+	'notice'
 ], function(
 	tabs,
 	menus,
@@ -15,7 +16,8 @@ define([
 	View,
 	Cache,
 	Capture,
-	Img
+	Img,
+	notice
 ) {
 
 	return {
@@ -33,14 +35,14 @@ define([
 				capture,
 				viewImageUrl;
 
-
+			console.log(notice);
 			var viewImageId = menus.create({
 				title: '查看图片',
 				contexts: ['all'],
 				onclick: function(data) {
 					console.log('查看背景图片data', data);
 					if (viewImageUrl) {
-						
+
 						window.open(viewImageUrl, '_blank');
 						return;
 						chrome.tabs.create({

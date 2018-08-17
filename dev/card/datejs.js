@@ -3,10 +3,10 @@ function YYYYMMDDstart(form, year, month, day)　　 {　　
     　　
     try {
         var y = new Date().getFullYear();　　
-        for (var i = (y - 1); i > (y - 100); i--) //以今年为准，前30年，后30年  
+        for (var i = (y - 0); i > (y - 100); i--) //以今年为准，前30年，后30年  
         　　 year.options.add(new Option(i, i));　　 //赋月份的下拉框  
         　　
-        for (var i = 2; i < 13; i++)　　 month.options.add(new Option(i, i));　　
+        for (var i = 1; i < 13; i++)　　 month.options.add(new Option((fixNum(i)), i));　　
         year.value = y;　　
         month.value = new Date().getMonth() + 1;　　
         var n = MonHead[new Date().getMonth()];　　
@@ -14,7 +14,10 @@ function YYYYMMDDstart(form, year, month, day)　　 {　　
         writeDay(n, day); //赋日期下拉框Author:meizz  
         　　
         day.value = new Date().getDate();　　
-    } catch (ev) {}
+    } catch (ev) {
+        console.log(ev);
+        
+    }
 }　　
 
 function YYYYDD(str, month, day) //年发生变化时日期发生变化(主要是判断闰平年)  
@@ -42,11 +45,16 @@ function MMDD(str, year, day) //月发生变化时日期联动
     if (str == 2 && IsPinYear(YYYYvalue)) n++;　　
     writeDay(n, day)　　
 }　　
+function fixNum(num){ console.log(num);
+    return num < 10 ? '0'+num : num;
+   
+    
+}
 function writeDay(n, day) //据条件写日期的下拉框  
 　　 {　　
     var e = day;
     optionsClear(e);　　
-    for (var i = 2; i < (n + 1); i++)　　 e.options.add(new Option(i, i));　　
+    for (var i = 1; i < (n + 1); i++)　　 e.options.add(new Option(fixNum(i), i));　　
 }　　
 function IsPinYear(year) //判断是否闰平年  
 　　 {

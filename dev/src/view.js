@@ -28,7 +28,10 @@ define([
 		jsList: [],
 		cssList: [],
 		open: function(item) {
-			window.open('view-source:' + item, '_blank');
+			var url = 'view-source:' + item;
+			chrome.tabs.create({
+				url: url
+			});
 		},
 		remove: function(data) {
 			var list = data || [];

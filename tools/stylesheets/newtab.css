@@ -1,0 +1,406 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: OratorStd;
+  src: url("../fonts/OratorStd.otf") format("opentype");
+}
+@font-face {
+  font-family: HelveticaNeue;
+  src: url("../fonts/HelveticaNeue.ttf") format("opentype");
+}
+.clearfix:before, .tab-box:before, .clearfix:after, .tab-box:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+.clearfix, .tab-box {
+  zoom: 1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Microsoft YaHei';
+}
+
+.top {
+  position: relative;
+  background: transparent;
+  height: 2rem;
+}
+
+body {
+  font-size: 1em;
+}
+
+.re {
+  position: relative;
+}
+
+.text-shadow, .date-box .tips, .date-box i, .date-box .date-year {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+@-webkit-keyframes test {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: 0 left;
+  }
+  100% {
+    background-size: 100%;
+    background-position: center;
+  }
+}
+@-moz-keyframes test {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: 0 left;
+  }
+  100% {
+    background-size: 100%;
+    background-position: center;
+  }
+}
+@-ms-keyframes test {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: 0 left;
+  }
+  100% {
+    background-size: 100%;
+    background-position: center;
+  }
+}
+@-o-keyframes test {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: 0 left;
+  }
+  100% {
+    background-size: 100%;
+    background-position: center;
+  }
+}
+@keyframes test {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  50% {
+    background-size: 110%;
+    background-position: 0 left;
+  }
+  100% {
+    background-size: 100%;
+    background-position: center;
+  }
+}
+.bg {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  filter: blur(3px);
+  background: #eee url(../images/bg_5.jpg) no-repeat center 0;
+  -webkit-animation: test 20s linear infinite;
+  -moz-animation: test 20s linear infinite;
+  -ms-animation: test 20s linear infinite;
+  -o-animation: test 20s linear infinite;
+  animation: test 20s linear infinite;
+}
+
+.body {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.search-box {
+  position: relative;
+  width: 50rem;
+  margin: 10rem auto;
+  text-align: center;
+  z-index: 100;
+}
+.search-box form {
+  position: relative;
+  border: 5px solid rgba(0, 0, 0, 0.02);
+  border-radius: 5px;
+  -webkit-transition: border 0.25s linear;
+  -moz-transition: border 0.25s linear;
+  -ms-transition: border 0.25s linear;
+  -o-transition: border 0.25s linear;
+  transition: border 0.25s linear;
+}
+.search-box form:hover {
+  border: 5px solid rgba(0, 0, 0, 0.2);
+}
+.search-box input,
+.search-box button {
+  height: 4rem;
+  border: none;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  background: white;
+  outline: none;
+}
+.search-box input {
+  width: 100%;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+.search-box button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #666;
+  fill: red;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: transparent;
+}
+
+.date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.date-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -webkit-box-orient: block-axis;
+  -moz-box-orient: block-axis;
+  -ms-box-orient: block-axis;
+  box-orient: block-axis;
+}
+.date-box .main {
+  position: relative;
+  color: #fff;
+  padding: 2.5rem 2rem;
+  -moz-border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.date-box .tips {
+  display: none;
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+}
+.date-box .tips p {
+  margin-top: 1rem;
+}
+.date-box .tips strong,
+.date-box .tips span {
+  vertical-align: bottom;
+}
+.date-box .tips strong {
+  font-family: Impact;
+}
+.date-box span,
+.date-box i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.date-box span:nth-child(2) {
+  margin-left: 2rem;
+}
+.date-box span:nth-child(3) {
+  margin-left: 2rem;
+}
+.date-box span {
+  display: inline-block;
+}
+.date-box em {
+  font-size: 6rem;
+  color: #fff;
+}
+.date-box i {
+  display: inline-block;
+  color: #fff;
+  margin: 0.2rem;
+  font-size: 15rem;
+  vertical-align: middle;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: HelveticaNeue;
+  font-weight: bold;
+}
+.date-box .date-year {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.clock {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+::-webkit-input-placeholder {
+  text-index: 100px;
+}
+
+:-moz-placeholder {
+  text-index: 100px;
+}
+
+::-moz-placeholder {
+  text-index: 100px;
+}
+
+:-ms-input-placeholder {
+  text-index: 100px;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  -webkit-box-orient: block-axis;
+  -moz-box-orient: block-axis;
+  -ms-box-orient: block-axis;
+  box-orient: block-axis;
+}
+.menu div {
+  min-width: 50rem;
+  height: 5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,305 @@
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/box";
+@import "compass/css3/border-radius";
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+@import "mixin";
+
+:root {
+}
+
+@font-face {
+	font-family: OratorStd;
+	src: url('../fonts/OratorStd.otf') format('opentype');
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeue.ttf') format('opentype');
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Microsoft YaHei';
+}
+
+.header {
+}
+
+.top {
+	//display: none;
+	position: relative;
+	background: rgba(0, 0, 0, 0.00);
+	height: 2rem;
+}
+
+body {
+	font-size: 1em;
+}
+
+.re {
+	position: relative;
+}
+
+.text-shadow {
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+@include keyframes(test) {
+	0% {
+		background-size: 100%;
+		background-position: center;
+	}
+
+	50% {
+		background-size: 110%;
+		background-position: 0 left;
+	}
+
+	100% {
+		background-size: 100%;
+		background-position: center;
+	}
+
+}
+
+.bg {
+	position: absolute;
+	width: 120%;
+	height: 120%;
+	left: -10%;
+	top: -10%;
+	filter: blur(3px);
+	background: #eee url(../images/bg_5.jpg) no-repeat center 0;
+	@include animation(test 20s linear infinite);
+}
+
+.body {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.search-box {
+	$radius: 5px;
+	position: relative;
+	width: 50rem;
+	margin: 10rem auto;
+	text-align: center;
+	z-index: 100;
+	//@include transition(transform 0.25s linear);
+
+	&:hover {
+		//@include transform(scale(1, 1.01));
+	}
+
+	form {
+		position: relative;
+		border: 5px solid rgba(0, 0, 0, 0.02);
+		border-radius: 5px;
+		@include transition(border 0.25s linear);
+
+		&:hover {
+			border: 5px solid rgba(0, 0, 0, 0.2);
+		}
+
+	}
+
+	input,
+	button {
+		height: 4rem;
+		border: none;
+		vertical-align: middle;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin: 0;
+		background: rgba(255, 255, 255, 1);
+		outline: none;
+	}
+
+	input {
+		width: 100%;
+		padding: 0 1rem;
+		border-radius: $radius;
+	}
+
+	button {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		padding: 0 1rem;
+		font-size: 2rem;
+		color: #666;
+		fill: red;
+		cursor: pointer;
+		border-top-right-radius: $radius;
+		border-bottom-right-radius: $radius;
+		background-color: transparent;
+	}
+
+}
+
+.date {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.date-box {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	@include display-box;
+	@include box-sizing(content-box);
+	@include box-pack(center);
+	@include box-pack(center);
+	@include box-align(center);
+	@include box-orient(block-axis);
+
+	.main {
+		position: relative;
+		//background: rgba(0, 0, 0, 0.2);
+		color: #fff;
+		padding: 2.5rem 2rem;
+		@include border-radius(.5rem);
+		//-webkit-box-reflect: below 2px -webkit-linear-gradient(top, rgba(250, 250, 250, 0), rgba(250, 250, 250, .0) 30%, rgba(250, 250, 250, 0.3));
+		//box-reflect: below 2px -webkit-linear-gradient(top, rgba(250, 250, 250, 0), rgba(250, 250, 250, .0) 30%, rgba(250, 250, 250, 0.3));
+	}
+
+	.tips {
+		display: none;
+		color: #fff;
+		text-align: center;
+		font-size: 3rem;
+		@extend .text-shadow;
+
+		p {
+			margin-top: 1rem;
+		}
+
+		strong,
+		span {
+			vertical-align: bottom;
+		}
+
+		strong {
+			font-family: Impact;
+		}
+
+		span {
+		}
+
+	}
+
+	span,
+	i {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	span:nth-child(2) {
+		margin-left: 2rem;
+	}
+
+	span:nth-child(3) {
+		margin-left: 2rem;
+	}
+
+	span {
+		display: inline-block;
+	}
+
+	em {
+		font-size: 6rem;
+		color: #fff;
+	}
+
+	i {
+		display: inline-block;
+		//background-color: rgba(0, 0, 0, 0.8);
+		//padding: 1rem .5rem;
+		color: #fff;
+		margin: 0.2rem;
+		font-size: 15rem;
+		vertical-align: middle;
+		@include border-radius(5px);
+		@extend .text-shadow;
+		//font-family: HelveticaNeue;
+		font-family: HelveticaNeue;
+		font-weight: bold;
+	}
+
+	.date-year {
+		font-size: 3rem;
+		color: #fff;
+		@extend .text-shadow;
+		//margin: 0.5rem;
+	}
+
+}
+
+.clock {
+	position: absolute;
+	right: 0;
+	top: 0;
+	// width: 500px;
+	// height: 500px;
+	//background-color: rgba(255, 255, 255, 0.05);
+}
+
+@include placeholder {
+	text-index: 100px;
+}
+
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+.tab-box {
+	@extend .clearfix;
+
+	.tab-list {
+	}
+
+	.tab-item {
+	}
+
+}
+
+.menu {
+	display: none;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	@include display-box;
+	@include box-sizing(content-box);
+	@include box-pack(center);
+	@include box-pack(center);
+	@include box-align(center);
+	@include box-orient(block-axis);
+
+	div {
+		min-width: 50rem;
+		height: 5rem;
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+		background-color: rgba(0, 0, 0, .2);
+	}
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="../stylesheets/newtab.css">
+		<link rel="stylesheet" href="../stylesheets/weather.css">
+		
+	</head>
+	<body>
+		<div class="bg"></div>
+		<div class="top">
+			<div class="wrapper"><svg version="1.1"
+       id="sun"
+       class="climacon climacon_sun"
+       viewBox="15 15 70 70">
+    <clipPath id="sunFillClip">
+      <path d="M0,0v100h100V0H0z M50.001,57.999c-4.417,0-8-3.582-8-7.999c0-4.418,3.582-7.999,8-7.999s7.998,3.581,7.998,7.999C57.999,54.417,54.418,57.999,50.001,57.999z"/>
+    </clipPath>
+    <g class="climacon_iconWrap climacon_iconWrap-sun">
+      <g class="climacon_componentWrap climacon_componentWrap-sun">
+        <g class="climacon_componentWrap climacon_componentWrap-sunSpoke">
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-east"
+                d="M72.03,51.999h-3.998c-1.105,0-2-0.896-2-1.999s0.895-2,2-2h3.998c1.104,0,2,0.896,2,2S73.136,51.999,72.03,51.999z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-northEast"
+                d="M64.175,38.688c-0.781,0.781-2.049,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l2.828-2.828c0.779-0.781,2.047-0.781,2.828,0c0.779,0.781,0.779,2.047,0,2.828L64.175,38.688z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-north"
+                d="M50.034,34.002c-1.105,0-2-0.896-2-2v-3.999c0-1.104,0.895-2,2-2c1.104,0,2,0.896,2,2v3.999C52.034,33.106,51.136,34.002,50.034,34.002z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-northWest"
+                d="M35.893,38.688l-2.827-2.828c-0.781-0.781-0.781-2.047,0-2.828c0.78-0.781,2.047-0.781,2.827,0l2.827,2.828c0.781,0.781,0.781,2.047,0,2.828C37.94,39.469,36.674,39.469,35.893,38.688z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-west"
+                d="M34.034,50c0,1.104-0.896,1.999-2,1.999h-4c-1.104,0-1.998-0.896-1.998-1.999s0.896-2,1.998-2h4C33.14,48,34.034,48.896,34.034,50z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-southWest"
+                d="M35.893,61.312c0.781-0.78,2.048-0.78,2.827,0c0.781,0.78,0.781,2.047,0,2.828l-2.827,2.827c-0.78,0.781-2.047,0.781-2.827,0c-0.781-0.78-0.781-2.047,0-2.827L35.893,61.312z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-south"
+                d="M50.034,65.998c1.104,0,2,0.895,2,1.999v4c0,1.104-0.896,2-2,2c-1.105,0-2-0.896-2-2v-4C48.034,66.893,48.929,65.998,50.034,65.998z"/>
+          <path class="climacon_component climacon_component-stroke climacon_component-stroke_sunSpoke climacon_component-stroke_sunSpoke-southEast"
+                d="M64.175,61.312l2.828,2.828c0.779,0.78,0.779,2.047,0,2.827c-0.781,0.781-2.049,0.781-2.828,0l-2.828-2.827c-0.781-0.781-0.781-2.048,0-2.828C62.126,60.531,63.392,60.531,64.175,61.312z"/>
+        </g>
+        <g class="climacon_componentWrap climacon_componentWrap_sunBody" clip-path="url(#sunFillClip)">
+          <circle class="climacon_component climacon_component-stroke climacon_component-stroke_sunBody"
+                  cx="50.034"
+                  cy="50"
+                  r="11.999"/>
+        </g>
+      </g>
+    </g>
+  </svg> </div>
+		</div>
+		<div class="clock">
+			<canvas class="lock" id="clock1"></canvas><!--
+			<canvas class="lock" id="clock2"></canvas>
+			<canvas class="lock" id="clock3"></canvas>
+			<canvas class="lock" id="clock4"></canvas> -->
+		</div>
+		<div class="body">
+			<div class="search-box">
+				<form method="get" action="http://www.google.com/search" >
+					<input type="search" name="q" placeholder="Search Google" autofocus autosave /><button>
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;fill: #999;  width:20px; height:20px;"  xml:space="preserve">
+						<g>
+							<path d="M190.619,155.849l-44.604-37.844c-1.062-0.885-2.362-1.363-3.682-1.363c-1.844,0-3.6,0.929-4.697,2.486
+								c-5.076,7.199-11.3,13.427-18.5,18.508c-1.34,0.946-2.228,2.392-2.435,3.968c-0.207,1.578,0.254,3.138,1.299,4.392l37.867,44.644
+								c2.566,3.079,6.292,4.856,10.206,4.856c3.519,0,6.87-1.413,9.437-3.98l16.007-16.007c2.727-2.728,4.136-6.288,3.966-10.026
+							C195.312,161.742,193.585,158.321,190.619,155.849z"></path>
+							<path d="M74.377,144.25c18.929,0,36.727-7.372,50.114-20.759c13.387-13.387,20.759-31.184,20.759-50.114
+								c0-39.079-31.793-70.873-70.873-70.873S3.505,34.298,3.505,73.377S35.298,144.25,74.377,144.25z M26.472,73.377
+								c0-26.415,21.49-47.905,47.905-47.905s47.905,21.49,47.905,47.905c0,12.775-4.988,24.799-14.047,33.857
+							c-9.059,9.058-21.083,14.047-33.858,14.047C47.962,121.282,26.472,99.792,26.472,73.377z"></path>
+						</g>
+					</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="date">
+			<div class="date-box">
+				
+				<div class="main">
+					
+					<div id="dateResult">
+						<span><i>0</i><i>1</i></span>
+						<span><i>0</i><i>1</i></span>
+						<span><i>0</i><i>1</i></span>
+						<span><em>AM</em></span>
+					</div>
+				</div>
+				<div class="date-year">
+					<div id="year"></div>
+				</div>
+				<div class="tips">
+					<p>
+						<strong>Good eveing</strong><span>每天天都是精彩的</span>
+					</p>
+					<p>
+						
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="menu">
+			<div>asdf</div>
+		</div> -->
+		<script src="../js/canvas-clock.js"></script>
+		<script src="../js/newtab.js"></script>
+	</body>
+</html>
